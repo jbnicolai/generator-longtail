@@ -135,6 +135,8 @@ var LongtailGenerator = yeoman.generators.Base.extend({
                         'index-nodotnet.jade',
                         'mq.less',
                         'mfirst-mq.less',
+                        'launchgrunt.command',
+                        'launchgrunt.bat',
                         'main.js'
                     ];
                     this.mkdir('app');
@@ -174,6 +176,8 @@ var LongtailGenerator = yeoman.generators.Base.extend({
 
                     this.copy('_package.json', 'package.json');
                     this.copy('_bower.json', 'bower.json');
+                    this.copy('launchgrunt.command');
+                    this.copy('launchgrunt.bat');
                 },
 
                 projectfiles: function () {
