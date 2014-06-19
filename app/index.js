@@ -69,7 +69,7 @@ var LongtailGenerator = yeoman.generators.Base.extend({
                     choices: [{
                             name: 'Use Jade templating engine',
                             value: 'includeJade',
-                            checked: true
+                            checked: false
                         }, {
                             name: 'Mobile First Project',
                             value: 'mobileFirst',
