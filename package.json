@@ -20,7 +20,9 @@
     "app"
   ],
   "keywords": [
-    "yeoman-generator"
+    "pure",
+    "html5",
+    "jQuery"
   ],
   "dependencies": {
     "yeoman-generator": "~0.16.0",
