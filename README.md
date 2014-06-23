@@ -12,7 +12,7 @@ This guide will help you through the process of setting up static frontend proje
 * A simple webserver that reloads automatically when you make changes.
 * A [Grunt][3] observer that automatically compile your changes on LESS and JavaScript files.
 
-As the framework may evolve to include more options (such as including other JavaScript libraries like [AngularJS][9], or other pre-processors like [Stylus][10], [SASS][11], ...), I strongly suggest that you subscribe to the Github project where the template is hosted: [https://github.com/rkgttr/generator-longtail][12]. This way you will get email notifications when a change is available and you will be able to update by reinstalling the [npm][13].
+As the framework may evolve to include more options (such as including other JavaScript libraries like [AngularJS][9], or other pre-processors like [Stylus][10], [SASS][11], ...), I strongly suggest that you subscribe to this Github project. This way you will get email notifications when a change is available and you will be able to update by reinstalling the [npm][13].
 
 For editing code, I suggest that you use [Sublime Text][14] with [Package Control][15] to extends its functionalies. This is the best and most extensible editor at the moment, simple as that.
 
