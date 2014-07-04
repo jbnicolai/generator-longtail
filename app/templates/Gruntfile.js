@@ -164,8 +164,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks('grunt-newer');
-    grunt.loadNpmTasks('grunt-contrib-jade');
+    grunt.loadNpmTasks('grunt-newer');<% if (includeJade) { %>
+    grunt.loadNpmTasks('grunt-contrib-jade');<% } %>
 
     // Default task(s).
     grunt.registerTask('default', ['less', 'autoprefixer', 'cssmin', 'uglify', 'newer:imagemin', <% if (includeJade) { %>'jade', <% } %>'connect', 'watch']);
