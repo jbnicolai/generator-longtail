@@ -89,22 +89,22 @@ Don't forget to launch app/launchgrunt before working on your project.
 
 Open [http://localhost:8080/][17].
 
-Save all your HTML templates either on the `app/` folder, either on the app/templates folder.  
-Alternatively, if you use Jade, save your Jade templates into the `app/jade folder`, and all your included Jade templates into the `app/jade/includes` folder. All generated HTML files will end up in the `app/` folder.
+There are two main folders in your `app/` folder: `app/build/` and `app/src/`. `app/build/` contains the compiled, concatenated and minified files you will deploy. `app/src/` contains your working files. Only exception is the HTML templates (when you don't use Jade) which are editable directly into `app/build/`. Save all your HTML templates either on the app/build/ folder, either on the app/build/templates folder. 
+Alternatively, if you use Jade, save your Jade templates into the `app/src/jade folder`, and all your included Jade templates into the `app/src/jade/includes` folder. All generated HTML files will end up in the `app/build/` folder.
 
-Always write your JavaScript into `app/js/main.js`
+Always write your JavaScript into `app/src/js/main.js`
 
-Add any jQuery plugins or JavaScript helpers into `app/js/plugins.js`
+Add any jQuery plugins or JavaScript helpers into `app/src/js/plugins.js`
 
-Write your main styles into `app/css/main.less`, your mediaqueries into `app/css/mediaqueries.less`, your LESS mixins and variables into `app/css/mixins.less`, and your no-JavaScript styles into `app/css/nojs.less`.
+Write your main styles into `app/src/css/main.less`, your mediaqueries into `app/src/css/mediaqueries.less`, your LESS mixins and variables into `app/src/css/mixins.less`, and your no-JavaScript styles into `app/src/css/nojs.less`.
 
-If you need to support Internet Explorer 8 and have answered "no" to the "mobile first" question in the project configuration, the breakpoints in `app/css/mediaqueries.less` won't be mobile first. So the styles you'll write into `app/css/main.less` will be the standard desktop ones, and devices specific ones will be into `app/css/mediaqueries.less`.  
-If you answered "yes" then the styles you'll write into `app/css/main.less` will be the mobile ones, that you'll need to surcharge into `app/css/mediaqueries.less`.  
+If you need to support Internet Explorer 8 and have answered "no" to the "mobile first" question in the project configuration, the breakpoints in `app/src/css/mediaqueries.less` won't be mobile first. So the styles you'll write into `app/src/css/main.less` will be the standard desktop ones, and devices specific ones will be into `app/src/css/mediaqueries.less`.  
+If you answered "yes" then the styles you'll write into `app/src/css/main.less` will be the mobile ones, that you'll need to surcharge into `app/src/css/mediaqueries.less`.  
 The grid system is devices agnostic, you need to add the proper classes to your grid units. For example, a grid unit that needs to be 100% wide on mobile, 50% wide on tablet, 33% wide on desktop, and 25% wide on large desktop will have these classes: `class="unit-1-3 unit-sm-1 unit-md-1-2 unit-lg-1-3 unit-xl-1-4"`. The first class (`unit-1-3`) is for devices that don't understand mediaqueries such as Internet Explorer 8\. Other classes are for small, medium, large, and x-large devices (sm, md, lg, xl). The `-1-3` component of the class name indicates the fraction of space that is used by the unit, in this example it's one third (33.3333%). The grid has up to 24 columns. All grid units should be encapsulated into a `< div class="grid"/\>`.
 
-Don't forget to change your favicon and the IOS and Windows special icons/tiles on the `app/` folder.
+Don't forget to change your favicon and the IOS and Windows special icons/tiles on the `app/build/` folder.
 
-Always put your images into `app/img/src`. If you delete an image, it will not be deleted on the `app/img/build` folder, do it manually.
+Always put your images into `app/src/img/`. If you delete an image, it will not be deleted on the `app/build/img/` folder, do it manually.
 
 If you want to commit your work on SVN, don't commit the `node\_modules` folder. Create a rule to exclude them.
 

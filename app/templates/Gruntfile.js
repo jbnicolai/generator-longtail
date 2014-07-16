@@ -13,13 +13,13 @@ module.exports = function (grunt) {
             server: {
                 options: {
                     port: 8080,
-                    base: 'app/',
+                    base: 'app/build/',
                     hostname: '*',
                     livereload: true,
                     middleware: function (connect) {
                         return [
                             require('connect-livereload')(),
-                            folderMount(connect, 'app')
+                            folderMount(connect, 'app/build')
                         ];
                     }
                 }
@@ -29,8 +29,8 @@ module.exports = function (grunt) {
         less: {
             development: {
                 files: [{
-                        src: "app/css/main.less",
-                        dest: "app/css/development/styles.css"
+                        src: "app/src/css/main.less",
+                        dest: "app/src/css/development/styles.css"
                     } // add more files after here if needed
                 ]
             }
@@ -42,7 +42,7 @@ module.exports = function (grunt) {
             },
             multiple_files: {
                 expand: true,
-                src: 'app/css/development/*.css'
+                src: 'app/src/css/development/*.css'
             }
         },
         // minify CSS
@@ -53,9 +53,9 @@ module.exports = function (grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: 'app/css/development/',
+                    cwd: 'app/src/css/development/',
                     src: ['*.css'],
-                    dest: 'app/css/build/',
+                    dest: 'app/build/css/',
                     ext: '.min.css',
                     extDot: 'first'
                 }]
@@ -70,7 +70,7 @@ module.exports = function (grunt) {
                     beautify: false
                 },
                 files: {
-                    'app/js/build/global.min.js': ['bower_components/jquery/dist/jquery.min.js', 'app/js/plugins.js', 'app/js/main.js']
+                    'app/build/js/global.min.js': ['bower_components/jquery/dist/jquery.min.js', 'app/src/js/plugins.js', 'app/src/js/main.js']
                 }
             },
             modernizr: {
@@ -79,7 +79,7 @@ module.exports = function (grunt) {
                     beautify: false
                 },
                 files: {
-                    'app/js/vendor/modernizr.js': ['bower_components/modernizr/modernizr.js']
+                    'app/build/js/vendor/modernizr.js': ['bower_components/modernizr/modernizr.js']
                 }
             }
         },<% if (includeJade) { %>
@@ -91,9 +91,9 @@ module.exports = function (grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: 'app/jade/',
+                    cwd: 'app/src/jade/',
                     src: ['*.jade'],
-                    dest: 'app/',
+                    dest: 'app/build/',
                     ext: '.html',
                     extDot: 'first'
                 }]
@@ -103,16 +103,16 @@ module.exports = function (grunt) {
         imagemin: {
             dist: {
                 expand: true,
-                cwd: 'app/img/src/',
+                cwd: 'app/src/img/',
                 src: ['**/*.{png,jpg,gif,svg}'],
-                dest: 'app/img/build/'
+                dest: 'app/build/img/'
             }
         },
         // watch for changes in files
         watch: {
             // watch for changes in CSS
             styles: {
-                files: ["app/css/*.less"],
+                files: ["app/src/css/*.less"],
                 tasks: ['less', 'autoprefixer', 'cssmin'],
                 options: {
                     livereload: true,
@@ -121,7 +121,7 @@ module.exports = function (grunt) {
             },
             // watch for changes in script
             scripts: {
-                files: ['app/js/*.js'],
+                files: ['app/src/js/*.js'],
                 tasks: ['uglify:site'],
                 options: {
                     livereload: true,
@@ -130,7 +130,7 @@ module.exports = function (grunt) {
             },
             // watch for updates in images
             images: {
-                files: ['app/img/src/**/*.{png,jpg,gif,svg}'],
+                files: ['app/src/img/**/*.{png,jpg,gif,svg}'],
                 tasks: ['newer:imagemin'],
                 options: {
                     livereload: true,
@@ -138,7 +138,7 @@ module.exports = function (grunt) {
                 }
             },<% if (includeJade) { %>
             jades: {
-                files: ['app/jade/**/*.jade'],
+                files: ['app/src/jade/**/*.jade'],
                 tasks: ['jade'],
                 options: {
                     livereload: true,
@@ -147,7 +147,7 @@ module.exports = function (grunt) {
             },<% } %>
             // watch for updates in html
             html: {
-                files: ['app/*.html', 'app/templates/*.html'],
+                files: ['app/build/*.html', 'app/build/templates/*.html'],
                 options: {
                     livereload: true,
                     event: ['added', 'deleted', 'changed']

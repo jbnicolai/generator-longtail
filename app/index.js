@@ -133,6 +133,10 @@ var LongtailGenerator = yeoman.generators.Base.extend({
                         'index-nodotnet.html',
                         'index-dotnet.jade',
                         'index-nodotnet.jade',
+                        'apple-touch-icon-precomposed.png',
+                        'favicon.ico',
+                        'tile.png',
+                        'tile-wide.png',
                         'mq.less',
                         'mfirst-mq.less',
                         'launchgrunt.command',
@@ -140,37 +144,45 @@ var LongtailGenerator = yeoman.generators.Base.extend({
                         'main.js'
                     ];
                     this.mkdir('app');
-                    this.mkdir('app/img/src');
-                    this.mkdir('app/img/build');
-                    this.mkdir('app/font');
-                    this.mkdir('app/templates');
-                    this.directory('css', 'app/css');
-                    this.directory('js', 'app/js');
-                    this.directory('templates', 'app/templates');
+                    this.mkdir('app/src');
+                    this.mkdir('app/build');
+                    this.mkdir('app/build/img');
+                    this.mkdir('app/build/fonts');
+                    this.mkdir('app/build/templates');
+                    this.mkdir('app/build/css');
+                    this.mkdir('app/build/js');
+                    this.mkdir('app/build/js/vendor');
+                    this.mkdir('app/src/img/');
+                    this.directory('css', 'app/src/css');
+                    this.directory('js', 'app/src/js');
                     if(this.includeJade) {
-                        this.directory('jade', 'app/jade');
+                        this.directory('jade', 'app/src/jade');
                         if(this.includeForm) {
-                            this.copy('index-dotnet.jade', 'app/jade/index.jade');
+                            this.copy('index-dotnet.jade', 'app/src/jade/index.jade');
                         } else {
-                            this.copy('index-nodotnet.jade', 'app/jade/index.jade');
+                            this.copy('index-nodotnet.jade', 'app/src/jade/index.jade');
                         }
                     }
                     if(this.includeForm) {
-                        this.copy('index-dotnet.html', 'app/index.html');
+                        this.copy('index-dotnet.html', 'app/build/index.html');
                     } else {
-                        this.copy('index-nodotnet.html', 'app/index.html');
+                        this.copy('index-nodotnet.html', 'app/build/index.html');
                     }
                     if(this.mobileFirst) {
-                        this.copy('mfirst-mq.less', 'app/css/mediaqueries.less');
+                        this.copy('mfirst-mq.less', 'app/src/css/mediaqueries.less');
                     } else {
-                        this.copy('mq.less', 'app/css/mediaqueries.less');
+                        this.copy('mq.less', 'app/src/css/mediaqueries.less');
                     }
+                    this.copy('tile.png', 'app/build/tile.png');
+                    this.copy('tile-wide.png', 'app/build/tile-wide.png');
+                    this.copy('favicon.ico', 'app/build/favicon.ico');
+                    this.copy('apple-touch-icon-precomposed.png', 'app/build/apple-touch-icon-precomposed.png');
                     this.expandFiles('*', {
                         cwd: this.sourceRoot(),
                         dot: true
                     }).forEach(function (el) {
                         if (ignores.indexOf(el) === -1) {
-                            this.copy(el, 'app/'+el);
+                            this.copy(el, 'app/src/'+el);
                         }
                     }, this);
 
@@ -184,7 +196,7 @@ var LongtailGenerator = yeoman.generators.Base.extend({
                     this.copy('editorconfig', '.editorconfig');
                     this.copy('jshintrc', '.jshintrc');
                     this.template('Gruntfile.js');
-                    this.template('main.js', 'app/js/main.js');
+                    this.template('main.js', 'app/src/js/main.js');
                 }
         });
 
