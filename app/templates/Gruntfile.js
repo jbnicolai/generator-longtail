@@ -29,8 +29,8 @@ module.exports = function (grunt) {
         less: {
             development: {
                 files: [{
-                        src: "app/src/css/main.less",
-                        dest: "app/src/css/development/styles.css"
+                        src: "app/src/less/main.less",
+                        dest: "app/src/css/styles.css"
                     } // add more files after here if needed
                 ]
             }
@@ -42,7 +42,7 @@ module.exports = function (grunt) {
             },
             multiple_files: {
                 expand: true,
-                src: 'app/src/css/development/*.css'
+                src: 'app/src/css/*.css'
             }
         },
         // minify CSS
@@ -53,7 +53,7 @@ module.exports = function (grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: 'app/src/css/development/',
+                    cwd: 'app/src/css/',
                     src: ['*.css'],
                     dest: 'app/build/css/',
                     ext: '.min.css',
@@ -112,7 +112,7 @@ module.exports = function (grunt) {
         watch: {
             // watch for changes in CSS
             styles: {
-                files: ["app/src/css/*.less"],
+                files: ["app/src/less/*.less"],
                 tasks: ['less', 'autoprefixer', 'cssmin'],
                 options: {
                     livereload: true,

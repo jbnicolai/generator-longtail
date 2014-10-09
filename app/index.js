@@ -153,6 +153,7 @@ var LongtailGenerator = yeoman.generators.Base.extend({
                     this.mkdir('app/build/js');
                     this.mkdir('app/build/js/vendor');
                     this.mkdir('app/src/img/');
+                    this.directory('less', 'app/src/less');
                     this.directory('css', 'app/src/css');
                     this.directory('js', 'app/src/js');
                     if(this.includeJade) {
@@ -169,9 +170,9 @@ var LongtailGenerator = yeoman.generators.Base.extend({
                         this.copy('index-nodotnet.html', 'app/build/index.html');
                     }
                     if(this.mobileFirst) {
-                        this.copy('mfirst-mq.less', 'app/src/css/mediaqueries.less');
+                        this.copy('mfirst-mq.less', 'app/src/less/mediaqueries.less');
                     } else {
-                        this.copy('mq.less', 'app/src/css/mediaqueries.less');
+                        this.copy('mq.less', 'app/src/less/mediaqueries.less');
                     }
                     this.copy('tile.png', 'app/build/tile.png');
                     this.copy('tile-wide.png', 'app/build/tile-wide.png');
