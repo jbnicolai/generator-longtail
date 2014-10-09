@@ -71,6 +71,10 @@ var LongtailGenerator = yeoman.generators.Base.extend({
                             value: 'includeJade',
                             checked: false
                         }, {
+                            name: 'Use SCSS (default is LESS)',
+                            value: 'includeSCSS',
+                            checked: false
+                        }, {
                             name: 'Mobile First Project',
                             value: 'mobileFirst',
                             checked: true
@@ -153,7 +157,11 @@ var LongtailGenerator = yeoman.generators.Base.extend({
                     this.mkdir('app/build/js');
                     this.mkdir('app/build/js/vendor');
                     this.mkdir('app/src/img/');
-                    this.directory('less', 'app/src/less');
+                    if(this.includeSCSS) {
+                        this.directory('less', 'app/src/less');
+                    } else {
+                        this.directory('less', 'app/src/scss');
+                    }
                     this.directory('css', 'app/src/css');
                     this.directory('js', 'app/src/js');
                     if(this.includeJade) {
@@ -170,9 +178,18 @@ var LongtailGenerator = yeoman.generators.Base.extend({
                         this.copy('index-nodotnet.html', 'app/build/index.html');
                     }
                     if(this.mobileFirst) {
-                        this.copy('mfirst-mq.less', 'app/src/less/mediaqueries.less');
+                        if(this.includeSCSS) {
+                            this.copy('mfirst-mq.scss', 'app/src/scss/mediaqueries.scss');
+                        } else {
+                            this.copy('mfirst-mq.less', 'app/src/less/mediaqueries.less');
+                        }
                     } else {
-                        this.copy('mq.less', 'app/src/less/mediaqueries.less');
+                        if(this.includeSCSS) {
+                            this.copy('mq.scss', 'app/src/scss/mediaqueries.scss');
+                        } else {
+                            this.copy('mq.less', 'app/src/less/mediaqueries.less');
+
+                        }
                     }
                     this.copy('tile.png', 'app/build/tile.png');
                     this.copy('tile-wide.png', 'app/build/tile-wide.png');

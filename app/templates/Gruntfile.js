@@ -25,6 +25,17 @@ module.exports = function (grunt) {
                 }
             }
         },
+        <% if (includeSCSS) { %>
+        // process + minify SCSS into CSS
+        sass: {
+            development: {
+                files: [{
+                        src: "app/src/scss/main.scss",
+                        dest: "app/src/css/styles.css"
+                    } // add more files after here if needed
+                ]
+            }
+        },<%  } else  { %>
         // process + minify LESS into CSS
         less: {
             development: {
@@ -34,7 +45,7 @@ module.exports = function (grunt) {
                     } // add more files after here if needed
                 ]
             }
-        },
+        },<%  } %>
         // auto browserprefix for CSS
         autoprefixer: {
             options: {
@@ -112,8 +123,8 @@ module.exports = function (grunt) {
         watch: {
             // watch for changes in CSS
             styles: {
-                files: ["app/src/less/*.less"],
-                tasks: ['less', 'autoprefixer', 'cssmin'],
+                files: [<% if (includeSCSS) { %>"app/src/scss/*.scss", <% } else { %> "app/src/less/*.less" <% } %>],
+                tasks: [<% if (includeSCSS) { %>'sass', <% } else { %> 'less', <% } %> 'autoprefixer', 'cssmin'],
                 options: {
                     livereload: true,
                     event: ['added', 'deleted', 'changed']
@@ -157,8 +168,9 @@ module.exports = function (grunt) {
     });
 
 
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-uglify');<% if (includeSCSS) { %>
+    grunt.loadNpmTasks('grunt-contrib-sass');<% } else { %>
+    grunt.loadNpmTasks('grunt-contrib-less');<% } %>
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-autoprefixer');
@@ -168,6 +180,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jade');<% } %>
 
     // Default task(s).
-    grunt.registerTask('default', ['less', 'autoprefixer', 'cssmin', 'uglify', 'newer:imagemin', <% if (includeJade) { %>'jade', <% } %>'connect', 'watch']);
+    grunt.registerTask('default', [<% if (includeSCSS) { %>'sass', <% } else { %> 'less', <% } %>'autoprefixer', 'cssmin', 'uglify', 'newer:imagemin', <% if (includeJade) { %>'jade', <% } %>'connect', 'watch']);
 
 };
