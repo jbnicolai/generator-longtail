@@ -112,6 +112,7 @@ var LongtailGenerator = yeoman.generators.Base.extend({
                     this.slugname = this._.slugify(props.name);
                     this.camelname= this._.camelize(this.slugname);
                     this.includeJade = hasFeature('includeJade');
+                    this.includeSCSS = hasFeature('includeSCSS');
                     this.mobileFirst = hasFeature('mobileFirst');
                     this.includeForm = hasFeature('includeForm');
                     this.name = props.name;
@@ -142,7 +143,9 @@ var LongtailGenerator = yeoman.generators.Base.extend({
                         'tile.png',
                         'tile-wide.png',
                         'mq.less',
+                        'mq.scss',
                         'mfirst-mq.less',
+                        'mfirst-mq.scss',
                         'launchgrunt.command',
                         'launchgrunt.bat',
                         'main.js'
@@ -158,9 +161,9 @@ var LongtailGenerator = yeoman.generators.Base.extend({
                     this.mkdir('app/build/js/vendor');
                     this.mkdir('app/src/img/');
                     if(this.includeSCSS) {
-                        this.directory('less', 'app/src/less');
+                        this.directory('scss', 'app/src/scss');
                     } else {
-                        this.directory('less', 'app/src/scss');
+                        this.directory('less', 'app/src/less');
                     }
                     this.directory('css', 'app/src/css');
                     this.directory('js', 'app/src/js');
