@@ -12,6 +12,7 @@
         "time-grunt": "~0.2.3",
         "grunt-contrib-imagemin": "~0.7.x",
         "grunt-autoprefixer": "~0.7.x",
+        "grunt-combine-media-queries": "~1.0.19",
         "grunt-contrib-watch": "~0.6.x",
         "grunt-contrib-uglify": "~0.4.x",
         "grunt-contrib-cssmin": "~0.9.x",<% if (includeSCSS) { %>

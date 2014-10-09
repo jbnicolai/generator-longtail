@@ -75,10 +75,6 @@ var LongtailGenerator = yeoman.generators.Base.extend({
                             value: 'includeSCSS',
                             checked: false
                         }, {
-                            name: 'Mobile First Project',
-                            value: 'mobileFirst',
-                            checked: true
-                        }, {
                             name: 'ASPX form included in the markup',
                             value: 'includeForm',
                             checked: true
@@ -113,7 +109,6 @@ var LongtailGenerator = yeoman.generators.Base.extend({
                     this.camelname= this._.camelize(this.slugname);
                     this.includeJade = hasFeature('includeJade');
                     this.includeSCSS = hasFeature('includeSCSS');
-                    this.mobileFirst = hasFeature('mobileFirst');
                     this.includeForm = hasFeature('includeForm');
                     this.name = props.name;
                     this.title = props.title;
@@ -142,10 +137,6 @@ var LongtailGenerator = yeoman.generators.Base.extend({
                         'favicon.ico',
                         'tile.png',
                         'tile-wide.png',
-                        'mq.less',
-                        'mq.scss',
-                        'mfirst-mq.less',
-                        'mfirst-mq.scss',
                         'launchgrunt.command',
                         'launchgrunt.bat',
                         'main.js'
@@ -179,20 +170,6 @@ var LongtailGenerator = yeoman.generators.Base.extend({
                         this.copy('index-dotnet.html', 'app/build/index.html');
                     } else {
                         this.copy('index-nodotnet.html', 'app/build/index.html');
-                    }
-                    if(this.mobileFirst) {
-                        if(this.includeSCSS) {
-                            this.copy('mfirst-mq.scss', 'app/src/scss/mediaqueries.scss');
-                        } else {
-                            this.copy('mfirst-mq.less', 'app/src/less/mediaqueries.less');
-                        }
-                    } else {
-                        if(this.includeSCSS) {
-                            this.copy('mq.scss', 'app/src/scss/mediaqueries.scss');
-                        } else {
-                            this.copy('mq.less', 'app/src/less/mediaqueries.less');
-
-                        }
                     }
                     this.copy('tile.png', 'app/build/tile.png');
                     this.copy('tile-wide.png', 'app/build/tile-wide.png');

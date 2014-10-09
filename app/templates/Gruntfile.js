@@ -46,6 +46,13 @@ module.exports = function (grunt) {
                 ]
             }
         },<%  } %>
+        // combine mediaqueries
+        cmq: {
+            multiple_files: {
+                expand: true,
+                src: 'app/src/css/*.css'
+            }
+        },
         // auto browserprefix for CSS
         autoprefixer: {
             options: {
@@ -124,7 +131,7 @@ module.exports = function (grunt) {
             // watch for changes in CSS
             styles: {
                 files: [<% if (includeSCSS) { %>"app/src/scss/*.scss", <% } else { %> "app/src/less/*.less" <% } %>],
-                tasks: [<% if (includeSCSS) { %>'sass', <% } else { %> 'less', <% } %> 'autoprefixer', 'cssmin'],
+                tasks: [<% if (includeSCSS) { %>'sass', <% } else { %> 'less', <% } %> 'cmq', 'autoprefixer', 'cssmin'],
                 options: {
                     livereload: true,
                     event: ['added', 'deleted', 'changed']
@@ -173,6 +180,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');<% } %>
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-combine-media-queries');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-connect');
@@ -180,6 +188,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jade');<% } %>
 
     // Default task(s).
-    grunt.registerTask('default', [<% if (includeSCSS) { %>'sass', <% } else { %> 'less', <% } %>'autoprefixer', 'cssmin', 'uglify', 'newer:imagemin', <% if (includeJade) { %>'jade', <% } %>'connect', 'watch']);
+    grunt.registerTask('default', [<% if (includeSCSS) { %>'sass', <% } else { %> 'less', <% } %>'cmq', 'autoprefixer', 'cssmin', 'uglify', 'newer:imagemin', <% if (includeJade) { %>'jade', <% } %>'connect', 'watch']);
 
 };
