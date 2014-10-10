@@ -1,8 +1,10 @@
 // build a grid units wrapper, usage is
-// .unit-wrapper(your-wrapper-name);
+// .unit-wrapper(~".your-wrapper-class-name");
+// or
+// .unit-wrapper(~".your-wrapper-class-name, header, .other-class-name");
 // can't do a traditional mixin because of the opera shit
 .unit-wrapper(@classname) {
-    .@{classname} {
+    @{classname} {
         letter-spacing: -0.31em;
         /* Webkit: collapse white-space between units */
         
@@ -39,7 +41,7 @@
         display: flex;
         flex-flow: row wrap;
     }
-    .opera-only:-o-prefocus, .@{classname} {
+    .opera-only:-o-prefocus, @{classname} {
         word-spacing: -0.43em;
     }
 }
