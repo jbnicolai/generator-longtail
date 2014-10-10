@@ -6,38 +6,34 @@
 .unit-wrapper(@classname) {
     @{classname} {
         letter-spacing: -0.31em;
-        /* Webkit: collapse white-space between units */
+        // Webkit: collapse white-space between units/
         
         *letter-spacing: normal;
-        /* reset IE < 8 */
+        // reset IE < 8 
         
         *word-spacing: -0.43em;
-        /* IE < 8: collapse white-space between units */
+        // IE < 8: collapse white-space between units
         
         text-rendering: optimizespeed;
-        /* Webkit: fixes text-rendering: optimizeLegibility */
-        /*
-        Sets the font stack to fonts known to work properly with the above letter
-        and word spacings. See: https://github.com/yui/pure/issues/41/
+        // Webkit: fixes text-rendering: optimizeLegibility 
+        // Sets the font stack to fonts known to work properly with the above letter
+        // and word spacings. See: https://github.com/yui/pure/issues/41/
 
-        The following font stack makes Pure Grids work on all known environments.
+        // The following font stack makes Pure Grids work on all known environments.
 
-        * FreeSans: Ships with many Linux distros, including Ubuntu
+        // FreeSans: Ships with many Linux distros, including Ubuntu
 
-        * Arimo: Ships with Chrome OS. Arimo has to be defined before Helvetica and
-          Arial to get picked up by the browser, even though neither is available
-          in Chrome OS.
+        // Arimo: Ships with Chrome OS. Arimo has to be defined before Helvetica and
+        //  Arial to get picked up by the browser, even though neither is available
+        //  in Chrome OS.
 
-        * Droid Sans: Ships with all versions of Android.
+        // Droid Sans: Ships with all versions of Android.
 
-        * Helvetica, Arial, sans-serif: Common font stack on OS X and Windows.
-        */
+        // Helvetica, Arial, sans-serif: Common font stack on OS X and Windows.
+        
         
         font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
-        /*
-        Use flexbox when possible to avoid `letter-spacing` side-effects.
-        */
-        
+        // Use flexbox when possible to avoid `letter-spacing` side-effects.
         display: flex;
         flex-flow: row wrap;
     }
