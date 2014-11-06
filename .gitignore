@@ -1,2 +1,4 @@
 node_modules/
 temp/
+generator.sublime-workspace
+generator.sublime-project
