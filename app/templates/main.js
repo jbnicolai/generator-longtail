@@ -11,7 +11,6 @@ function LTApp() {
     this.DOC = $(document);
     this.BODY = $('body');
     this.HTML = $('html');
-    this.INITED = false;
 }
 /**
  *
@@ -19,40 +18,19 @@ function LTApp() {
  *
  **/
 
-function App_<%= camelname %>() {
-    if(App_<%= camelname %>.instance !== undefined) {
-        return App_<%= camelname %>.instance;
-    } else {
-        App_<%= camelname %>.instance = this;
-    }
+function App_<%= name %>() {
     LTApp.call(this);
-    return App_<%= camelname %>.instance;
 }
-App_<%= camelname %>.prototype = new LTApp();
-
-/**
-*
-* Singleton thing
-*
-**/
-App_<%= camelname %>.getInstance = function(){
-    if(App_<%= camelname %>.instance === undefined) {
-        new App_<%= camelname %>();
-    }
-    return App_<%= camelname %>.instance;
-}
+App_<%= name %>.prototype = new LTApp();
 
 /**
  *
  * Initialize your app, surcharge with whatever needed
  *
  **/
-App_<%= camelname %>.prototype.init = function () {
+App_<%= name %>.prototype.init = function () {
 	var scope = this;
-    if(!scope.INITED) {
-        scope.INITED = true;
-        scope.addListeners();
-    }
+    scope.addListeners();
 };
 
 /**
@@ -60,7 +38,7 @@ App_<%= camelname %>.prototype.init = function () {
  * Event Listeners, surcharge with whatever needed
  *
  **/
-App_<%= camelname %>.prototype.addListeners = function () {
+App_<%= name %>.prototype.addListeners = function () {
 	var scope = this;
     this.WIN.resize(function (event) {
         return event;
@@ -80,7 +58,7 @@ App_<%= camelname %>.prototype.addListeners = function () {
  * React on any Ajax Error
  *
  **/
-App_<%= camelname %>.prototype.onAjaxError = function (event, xhr, settings, thrownError) {
+App_<%= name %>.prototype.onAjaxError = function (event, xhr, settings, thrownError) {
 	var scope = this;
     return arguments;
 };
@@ -91,7 +69,7 @@ App_<%= camelname %>.prototype.onAjaxError = function (event, xhr, settings, thr
  * DOM may be updated/changed
  *
  **/
-App_<%= camelname %>.prototype.onAjaxSuccess = function (event, xhr, settings) {
+App_<%= name %>.prototype.onAjaxSuccess = function (event, xhr, settings) {
 	var scope = this;
     return arguments;
 };
@@ -101,7 +79,7 @@ App_<%= camelname %>.prototype.onAjaxSuccess = function (event, xhr, settings) {
  * Declare new methods in such way
  *
  **/
-App_<%= camelname %>.prototype.doSomething = function () {
+App_<%= name %>.prototype.doSomething = function () {
 	var scope = this;
     // code here
 };
@@ -112,5 +90,6 @@ App_<%= camelname %>.prototype.doSomething = function () {
  *
  **/
 $(document).ready(function () {
-    App_<%= camelname %>.getInstance().init();
+    var scope = new App_<%= name %>();
+    scope.init();
 });

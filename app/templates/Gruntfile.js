@@ -89,7 +89,6 @@ module.exports = function (grunt) {
                 },
                 files: {
                     'app/build/js/global.min.js': ['bower_components/jquery/dist/jquery.min.js', 'app/src/js/plugins.js', 'app/src/js/main.js']
-                    // You can add additional JavaScript files into the above array, if you need to
                 }
             },
             modernizr: {
@@ -129,14 +128,6 @@ module.exports = function (grunt) {
         },
         // watch for changes in files
         watch: {
-            // watch for change in grunt file then reload if necessary
-            configFiles: {
-                files: ['Gruntfile.js'],
-                tasks: [<% if (includeSCSS) { %>'sass', <% } else { %> 'less', <% } %>'cmq', 'autoprefixer', 'cssmin', 'uglify', 'newer:imagemin', <% if (includeJade) { %>'jade' <% } %>],
-                options: {
-                    reload: true
-                }
-            },
             // watch for changes in CSS
             styles: {
                 files: [<% if (includeSCSS) { %>"app/src/scss/*.scss", <% } else { %> "app/src/less/*.less" <% } %>],
