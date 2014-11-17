@@ -1,6 +1,6 @@
 {
   "name": "generator-longtail",
-  "version": "0.1.11",
+  "version": "0.1.16",
   "description": "Yeoman generator",
   "license": "MIT",
   "main": "app/index.js",
@@ -24,7 +24,8 @@
     "html5",
     "jQuery",
     "Jade",
-    "LESS"
+    "LESS",
+    "SASS"
   ],
   "dependencies": {
     "yeoman-generator": "~0.16.0",

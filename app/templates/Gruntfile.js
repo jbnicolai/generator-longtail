@@ -29,6 +29,10 @@ module.exports = function (grunt) {
         // process + minify SCSS into CSS
         sass: {
             development: {
+                options: {
+                    loadPath: require('node-bourbon').includePaths,
+                    loadPath: require('node-neat').includePaths
+                },
                 files: [{
                         src: "app/src/scss/main.scss",
                         dest: "app/src/css/styles.css"

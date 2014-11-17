@@ -133,10 +133,16 @@ var LongtailGenerator = yeoman.generators.Base.extend({
                         'index-nodotnet.html',
                         'index-dotnet.jade',
                         'index-nodotnet.jade',
-                        'apple-touch-icon-precomposed.png',
+                        'apple-touch-icon-57x57.png',
+                        'apple-touch-icon-72x72.png',
+                        'apple-touch-icon-114x114.png',
+                        'apple-touch-icon-120x120.png',
+                        'apple-touch-icon-144x144.png',
+                        'apple-touch-icon-152x152.png',
                         'favicon.ico',
-                        'tile.png',
-                        'tile-wide.png',
+                        'mstile-144x144.png',
+                        'favicon-16x16.png',
+                        'favicon-32x32.png',
                         'launchgrunt.command',
                         'launchgrunt.bat',
                         'main.js'
@@ -171,10 +177,17 @@ var LongtailGenerator = yeoman.generators.Base.extend({
                     } else {
                         this.copy('index-nodotnet.html', 'app/build/index.html');
                     }
-                    this.copy('tile.png', 'app/build/tile.png');
-                    this.copy('tile-wide.png', 'app/build/tile-wide.png');
+                    this.copy('mstile-144x144.png', 'app/build/mstile-144x144.png');
+                    this.copy('favicon-16x16.png', 'app/build/favicon-16x16.png');
+                    this.copy('favicon-16x16.png', 'app/build/favicon-16x16.png');
+                    this.copy('favicon-32x32.png', 'app/build/favicon-32x32.png');
                     this.copy('favicon.ico', 'app/build/favicon.ico');
-                    this.copy('apple-touch-icon-precomposed.png', 'app/build/apple-touch-icon-precomposed.png');
+                    this.copy('apple-touch-icon-57x57.png', 'app/build/apple-touch-icon-57x57.png');
+                    this.copy('apple-touch-icon-72x72.png', 'app/build/apple-touch-icon-72x72.png');
+                    this.copy('apple-touch-icon-114x114.png', 'app/build/apple-touch-icon-114x114.png');
+                    this.copy('apple-touch-icon-120x120.png', 'app/build/apple-touch-icon-120x120.png');
+                    this.copy('apple-touch-icon-144x144.png', 'app/build/apple-touch-icon-144x144.png');
+                    this.copy('apple-touch-icon-152x152.png', 'app/build/apple-touch-icon-152x152.png');
                     this.expandFiles('*', {
                         cwd: this.sourceRoot(),
                         dot: true
