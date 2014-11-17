@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"ini",
+				"INITED"
+			],
+			[
 				"text",
 				"text-align"
 			],
@@ -276,10 +280,6 @@
 				"closest	.closest()"
 			],
 			[
-				"ini",
-				"initForms"
-			],
-			[
 				"cur",
 				"currentIndex"
 			],
@@ -519,6 +519,38 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/templates/main.js",
+			"settings":
+			{
+				"buffer_size": 2222,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/templates/Gruntfile.js",
+			"settings":
+			{
+				"buffer_size": 7175,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 852,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/index.js",
+			"settings":
+			{
+				"buffer_size": 8363,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -653,72 +685,17 @@
 	},
 	"expanded_folders":
 	[
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews1",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews1/build",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews1/src",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews1/src/js",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews10",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews10/src",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews10/src/js",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews11",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews11/build",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews11/src",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews11/src/js",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews12",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews12/src",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews12/src/js",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews13",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews13/build",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews13/src",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews13/src/js",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews2",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews2/src",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews2/src/js",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews7",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews8",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews8/src",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews8/src/js",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews9",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews9/src",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews9/src/js",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews1",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews1/src",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews1/src/js",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews10",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews10/src",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews10/src/js",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews11",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews11/src",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews11/src/js",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews12",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews12/src",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews12/src/js",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews13",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews13/build",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews13/src",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews13/src/js",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews2",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews2/src",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews2/src/js",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews6",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews6/src",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews6/src/css",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews6/src/js",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews6/src/less",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews7",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews7/src",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews7/src/js",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews8",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews8/src",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews8/src/js",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews9",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews9/src",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews9/src/js",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/feeds",
-		"/E/Development/generator-longtail"
+		"/E/Development/generator-longtail",
+		"/E/Development/generator-longtail/app",
+		"/E/Development/generator-longtail/app/templates"
 	],
 	"file_history":
 	[
+		"/E/Development/generator-longtail/.gitignore",
+		"/E/Development/test/app/src/js/main.js",
+		"/E/Development/test/Gruntfile.js",
+		"/E/Development/test/app/build/js/global.min.js",
+		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/Gruntfile.js",
 		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews11/src/js/main.js",
 		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews11/build/feed_url.json",
 		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews1/build/feed_url.json",
@@ -781,7 +758,6 @@
 		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/300x250ChooseYourNews6/build/feed_url.json",
 		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews1/src/less/main.less",
 		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews2/src/less/main.less",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/Gruntfile.js",
 		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews2/build/feed_url.json",
 		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/300x250ChooseYourNews2/build/feed_url.json",
 		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90-perthnow-chooseyournews-2.zip",
@@ -842,11 +818,7 @@
 		"/E/html5banner/test/app/build/feed.json",
 		"/E/html5banner/test/app/src/js/main.js",
 		"/E/html5banner/test/app/src/jade/index.jade",
-		"/E/html5banner/test/app/src/jade/includes/body.jade",
-		"/E/html5banner/test/app/build/index.html",
-		"/E/html5banner/test/test/package.json",
-		"/E/html5banner/test/test/Gruntfile.js",
-		"/E/html5banner/test/Gruntfile.js"
+		"/E/html5banner/test/app/src/jade/includes/body.jade"
 	],
 	"find":
 	{
@@ -889,6 +861,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"this",
+			"nouveau test",
+			"<%= name %>",
 			"240",
 			"160",
 			"240",
@@ -1013,10 +988,7 @@
 			"msg",
 			"chat message",
 			"$messages",
-			"console",
-			"MozWebSocket",
-			"xdomain",
-			"agent"
+			"console"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1152,8 +1124,129 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/templates/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2222,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								277,
+								277
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/templates/Gruntfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7175,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3668,
+								3668
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1350.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 852,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								343,
+								343
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8363,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4175,
+								4184
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1404.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -1217,7 +1310,7 @@
 		[
 			[
 				"",
-				"E:\\Development\\big history\\big history.sublime-project"
+				"E:\\Development\\perthnow-banneradmin\\front-prototype\\perthnow admin.sublime-project"
 			]
 		],
 		"width": 380.0
