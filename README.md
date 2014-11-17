@@ -71,7 +71,7 @@ In the console that opens, type:
 
 Press Enter and answer the few questions about the project name, description and version. If you want to use the [Jade templating engine][5], answer **yes** to the `Use Jade templating engine` question. I strongly recommend using Jade as it's a very powerful templating engine. Once you've adopted it, standard HTML coding looks like stone age.
 
-You can choose to use [SCSS][11] instead of [LESS][6] but the SCSS files are not finished. At all.
+You can choose to use [SCSS][11] instead of [LESS][6].
 
 If you answer **yes** to the `ASPX form included in the markup` question, what the template does is adding a form tag after the body to encapsulate your page content. This may impact the style of your page.
 
@@ -154,7 +154,37 @@ So in short, the first arguments is the base width of you grid unit, which will 
 
 ### Using SCSS
 
-Coming soon!
+The SASS folders are broken up based loosely on the principles outlines in [SMACSS - Scalable and Modular Architecture for CSS](https://smacss.com/) and is intended to be used with a MOBILE FIRST approach.
+
+Base: 
+base.scss - Headings, typography, resets etc.
+fonts.scss - Font Face, Icon Fonts.
+normalize.scss - CSS reset for SCSS
+
+Layout:
+Create individual SCSS files here for different sections of the website e.g header, footer, front-page etc.
+
+Modules:
+Create SCSS files for reusable modules or elements in the website e.g buttons, slideshows, galleries, forms etc.
+
+Tools:
+mixins.scss - Add your mixins here.
+variables.scss - Set your variables here, font colours, media queries etc.
+
+Remember when adding a file, you must also add it to `main.scss`.
+
+Media Queries are set in _variables.scss and are called when needed. e.g:
+		.myelement {
+			color: red;
+			
+			@include media($medium) {
+				color: blue;
+			}
+		}
+
+Included is Bourbon and Bourbon Neat (Grid System). These come with some helpful mixins and a handy grid system.
+[Bourbon](http://bourbon.io/docs/)
+[Bourbon Neat](http://thoughtbot.github.io/neat-docs/latest/)
 
 Any bug? [Let me know][18].
 
