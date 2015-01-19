@@ -133,16 +133,6 @@ var LongtailGenerator = yeoman.generators.Base.extend({
                         'index-nodotnet.html',
                         'index-dotnet.jade',
                         'index-nodotnet.jade',
-                        'apple-touch-icon-57x57.png',
-                        'apple-touch-icon-72x72.png',
-                        'apple-touch-icon-114x114.png',
-                        'apple-touch-icon-120x120.png',
-                        'apple-touch-icon-144x144.png',
-                        'apple-touch-icon-152x152.png',
-                        'favicon.ico',
-                        'mstile-144x144.png',
-                        'favicon-16x16.png',
-                        'favicon-32x32.png',
                         'launchgrunt.command',
                         'launchgrunt.bat',
                         'main.js'
@@ -152,7 +142,6 @@ var LongtailGenerator = yeoman.generators.Base.extend({
                     this.mkdir('app/build');
                     this.mkdir('app/build/img');
                     this.mkdir('app/build/fonts');
-                    this.mkdir('app/build/templates');
                     this.mkdir('app/build/css');
                     this.mkdir('app/build/js');
                     this.mkdir('app/build/js/vendor');
@@ -163,6 +152,7 @@ var LongtailGenerator = yeoman.generators.Base.extend({
                         this.directory('less', 'app/src/less');
                     }
                     this.directory('css', 'app/src/css');
+                    this.directory('favicon', 'app/src/favicon');
                     this.directory('js', 'app/src/js');
                     if(this.includeJade) {
                         this.directory('jade', 'app/src/jade');
@@ -171,23 +161,13 @@ var LongtailGenerator = yeoman.generators.Base.extend({
                         } else {
                             this.copy('index-nodotnet.jade', 'app/src/jade/index.jade');
                         }
-                    }
-                    if(this.includeForm) {
-                        this.copy('index-dotnet.html', 'app/build/index.html');
                     } else {
-                        this.copy('index-nodotnet.html', 'app/build/index.html');
+                        if(this.includeForm) {
+                            this.copy('index-dotnet.html', 'app/src/index.html');
+                        } else {
+                            this.copy('index-nodotnet.html', 'app/src/index.html');
+                        }
                     }
-                    this.copy('mstile-144x144.png', 'app/build/mstile-144x144.png');
-                    this.copy('favicon-16x16.png', 'app/build/favicon-16x16.png');
-                    this.copy('favicon-16x16.png', 'app/build/favicon-16x16.png');
-                    this.copy('favicon-32x32.png', 'app/build/favicon-32x32.png');
-                    this.copy('favicon.ico', 'app/build/favicon.ico');
-                    this.copy('apple-touch-icon-57x57.png', 'app/build/apple-touch-icon-57x57.png');
-                    this.copy('apple-touch-icon-72x72.png', 'app/build/apple-touch-icon-72x72.png');
-                    this.copy('apple-touch-icon-114x114.png', 'app/build/apple-touch-icon-114x114.png');
-                    this.copy('apple-touch-icon-120x120.png', 'app/build/apple-touch-icon-120x120.png');
-                    this.copy('apple-touch-icon-144x144.png', 'app/build/apple-touch-icon-144x144.png');
-                    this.copy('apple-touch-icon-152x152.png', 'app/build/apple-touch-icon-152x152.png');
                     this.expandFiles('*', {
                         cwd: this.sourceRoot(),
                         dot: true
@@ -206,6 +186,7 @@ var LongtailGenerator = yeoman.generators.Base.extend({
                 projectfiles: function () {
                     this.copy('editorconfig', '.editorconfig');
                     this.copy('jshintrc', '.jshintrc');
+                    this.copy('gitignore', '.gitignore');
                     this.template('Gruntfile.js');
                     this.template('main.js', 'app/src/js/main.js');
                 }

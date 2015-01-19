@@ -1,30 +1,20 @@
-@import 'normalize.less';
-@import 'font.less';
-@import 'variables.less';
-@import 'mixins.less';
-@import 'grid.less';
-body, html {
-	height:100%;
-}
-body > form {
-	height:100%;
-}
-html {
-  box-sizing: border-box;
-}
-// better default, can be changed to your convenience, comment the lines that you don't want
-* {
-	box-sizing:inherit;
-	transition: all .2s ease;
-	background-repeat: no-repeat;
-	position: relative;
-	&:before,
-	&:after {
-		transition: all .2s ease;
-		box-sizing:inherit;
-		background-repeat: no-repeat;
-		position: relative;
-	}
-}
+@import 'tools/normalize.less';
+@import 'base/font.less';
+@import 'tools/variables.less';
+@import 'tools/mixins.less';
+@import 'tools/grid.less';
+@import 'base/base.less';
+// register your grid wrappers here (uncomment next line):
+// .unit-wrapper(~".your-wrapper-class-name, header, .other-class-name");
+// end of your grid shit.
 
-@import 'helpers.less';
+// General rule: put your layout elements under the "layout" folder, put your generic elements under the "modules" folder
+
+// layout
+@import 'layout/header.less';
+@import 'layout/footer.less';
+
+// Modules
+@import 'modules/buttons.less';
+
+@import 'base/helpers.less';

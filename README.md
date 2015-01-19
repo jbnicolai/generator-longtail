@@ -90,22 +90,22 @@ Don't forget to launch app/launchgrunt before working on your project.
 
 Open [http://localhost:8080/][17].
 
-There are two main folders in your `app/` folder: `app/build/` and `app/src/`. `app/build/` contains the compiled, concatenated and minified files you will deploy. `app/src/` contains your working files. Only exception is the HTML templates (when you don't use Jade) which are editable directly into `app/build/`. Save all your HTML templates either on the app/build/ folder, either on the app/build/templates folder. 
-Alternatively, if you use Jade, save your Jade templates into the `app/src/jade folder`, and all your included Jade templates into the `app/src/jade/includes` folder. All generated HTML files will end up in the `app/build/` folder.
+There are two main folders in your `app/` folder: `app/build/` and `app/src/`. `app/build/` contains the compiled, concatenated and minified files you will deploy. You should never work into this folder. `app/src/` contains your working files. 
+If you use Jade, save your Jade templates into the `app/src/jade folder`, and all your included Jade templates into the `app/src/jade/includes` folder. All generated HTML files will end up in the `app/build/` folder. If you don't use Jade, all the HTML files that you edit or create into the `app/src/` folder will be copied over the `app/build/` folder.
 
 Always write your JavaScript into `app/src/js/main.js`
 
 Add any jQuery plugins or JavaScript helpers into `app/src/js/plugins.js`
 
-Don't forget to change your favicon and the IOS and Windows special icons/tiles on the `app/build/` folder.
+Don't forget to change your favicon and the IOS and Windows special icons/tiles on the `app/src/favicon/` folder.
 
 Always put your images into `app/src/img/`. If you delete an image, it will not be deleted on the `app/build/img/` folder, do it manually.
 
-If you want to commit your work on SVN or any version control system, don't commit the `node\_modules` folder. Create a rule to exclude them.
+If you want to commit your work on SVN or any version control system, don't commit the `node\_modules` folder. Create a rule to exclude them. This is automatically setup for GIT.
 
 ### Using LESS
 
-Write your main styles into `app/src/less/main.less`. You can create more `less` files if you want to structure your project differently. You just have to import these files into `app/src/less/main.less` with the `@import` directive.
+Write your main styles into `app/src/less/main.less`. However, it's recommended to create more `less` files into the `app/src/less/layout` and the `app/src/less/modules` folders. You just have to import these files into `app/src/less/main.less` with the `@import` directive.
 
 You can write all your mediaqueries as you go by nesting them directly in your code. For example:
 
