@@ -7,7 +7,11 @@
 		},
 		{
 			"follow_symlinks": true,
-			"path": "E:\\Development\\test\\app\\src"
+			"path": "E:\\Development\\generator-longtailbanners"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "E:\\Development\\test\\src"
 		}
 	]
 }

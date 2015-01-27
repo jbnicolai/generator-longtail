@@ -1,8 +1,8 @@
 .sass-cache
-node_modules
-bower_components
-app/build/
-app/src/css/
+__ZIP_FILES/
+node_modules/
+build/
+src/css/
 .DS_Store
 .AppleDouble
 .LSOverride

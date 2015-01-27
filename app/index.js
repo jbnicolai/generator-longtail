@@ -28,40 +28,29 @@ var LongtailGenerator = yeoman.generators.Base.extend({
 
             var prompts = [{
                     name: 'name',
-                    message: 'Project Name',
-                    default: this.appname,
-                    filter: function (input) {
-                        var done = this.async();
-
-                        pkgName(input, function (err, available) {
-                            if (!available.bower && !available.npm) {
-                                log.info(chalk.yellow(input) + ' already exists on npm and Bower. You might want to use another name.');
-                            } else {
-                                if (!available.bower) {
-                                    log.info(chalk.yellow(input) + ' already exists on Bower. You might want to use another name.');
-                                }
-
-                                if (!available.npm) {
-                                    log.info(chalk.yellow(input) + ' already exists on npm. You might want to use another name.');
-                                }
-                            }
-
-                            done(input);
-                        });
-                    }
+                    message: 'Project name',
+                    default: this.appname
                 }, {
                     name: 'title',
+                    message: 'Project title (useful for documentation)',
                     default: 'Awesome New Project'
                 }, {
                     name: 'description',
+                    message: 'Project description (useful for documentation)',
                     default: 'The best project ever.'
                 }, {
                     name: 'version',
                     default: '0.1.0'
                 }, {
-                    name: 'author_name'
+                    type: 'input',
+                    name: 'author_name',
+                    message: 'What is your name?',
+                    store   : true
                 }, {
-                    name: 'author_email'
+                    type: 'input',
+                    name: 'author_email',
+                    message: 'What is your email address?',
+                    store   : true
                 }, {
                     type: 'checkbox',
                     name: 'features',
@@ -135,7 +124,8 @@ var LongtailGenerator = yeoman.generators.Base.extend({
                         'index-nodotnet.jade',
                         'launchgrunt.command',
                         'launchgrunt.bat',
-                        'main.js'
+                        'main.js',
+                        'README.md'
                     ];
                     this.mkdir('app');
                     this.mkdir('app/src');
@@ -189,6 +179,7 @@ var LongtailGenerator = yeoman.generators.Base.extend({
                     this.copy('gitignore', '.gitignore');
                     this.template('Gruntfile.js');
                     this.template('main.js', 'app/src/js/main.js');
+                    this.template('README.md', 'README.md');
                 }
         });
 
