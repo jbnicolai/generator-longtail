@@ -11,6 +11,7 @@
         "grunt": "~0.4.2",
         "time-grunt": "~0.2.3",
         "grunt-contrib-imagemin": "~0.7.x",
+        "grunt-svgmin": "^2.0.0",
         "grunt-autoprefixer": "~0.7.x",
         "grunt-combine-media-queries": "~1.0.19",
         "grunt-contrib-watch": "~0.6.x",

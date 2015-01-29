@@ -138,12 +138,52 @@ module.exports = function (grunt) {
                 dest: 'app/build/'
             }<%  } %>
         },
+        // optimize svg
+        svgmin: {
+            options: {
+                plugins: [{
+                    removeUselessStrokeAndFill: true
+                }, {
+                    removeDoctype: true
+                }, {
+                    removeComments: true
+                }, {
+                    removeEditorsNSData: true
+                }, {
+                    cleanupIDs: true
+                }, {
+                    convertColors: true
+                }, {
+                    convertStyleToAttrs: true
+                }, {
+                    convertShapeToPath: true
+                }, {
+                    cleanupEnableBackground: true
+                }, {
+                    cleanupNumericValues: true
+                }, {
+                    collapseGroups: true
+                }, {
+                    convertPathData: true
+                }, {
+                    removeUselessStrokeAndFill: false
+                }]
+            },
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd: 'app/src/img/',
+                    src: ['**/*.svg'],
+                    dest: 'app/build/img/'
+                }]
+            }
+        },
         // optimize images
         imagemin: {
             dist: {
                 expand: true,
                 cwd: 'app/src/img/',
-                src: ['**/*.{png,jpg,gif,svg}'],
+                src: ['**/*.{png,jpg,gif}'],
                 dest: 'app/build/img/'
             }
         },
@@ -187,7 +227,7 @@ module.exports = function (grunt) {
             // watch for updates in images
             images: {
                 files: ['app/src/img/**/*.{png,jpg,gif,svg}'],
-                tasks: ['newer:imagemin'],
+                tasks: ['newer:imagemin', 'newer:svgmin'],
                 options: {
                     livereload: true,
                     event: ['added', 'deleted', 'changed']
@@ -219,6 +259,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');<% } else { %>
     grunt.loadNpmTasks('grunt-contrib-less');<% } %>
     grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-svgmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-combine-media-queries');
     grunt.loadNpmTasks('grunt-autoprefixer');
@@ -229,6 +270,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
 
     // Default task(s).
-    grunt.registerTask('default', [<% if (includeSCSS) { %>'sass', <% } else { %> 'less', <% } %>'cmq', 'autoprefixer', 'copy:favicon', 'cssmin', 'uglify', 'newer:imagemin', <% if (includeJade) { %>'jade',  <% } else { %> 'copy:html', <% } %>'connect', 'watch']);
+    grunt.registerTask('default', [<% if (includeSCSS) { %>'sass', <% } else { %> 'less', <% } %>'cmq', 'autoprefixer', 'copy:favicon', 'cssmin', 'uglify', 'imagemin', 'svgmin', <% if (includeJade) { %>'jade',  <% } else { %> 'copy:html', <% } %>'connect', 'watch']);
 
 };
