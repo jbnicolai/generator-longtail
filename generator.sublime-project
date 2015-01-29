@@ -12,6 +12,14 @@
 		{
 			"follow_symlinks": true,
 			"path": "E:\\Development\\test\\src"
+		},
+		{
+			"follow_symlinks": true,
+			"path": ".git"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "E:\\Development\\react\\app\\src"
 		}
 	]
 }

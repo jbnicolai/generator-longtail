@@ -1,32 +1,29 @@
-# Longtail Frontend Setup 
+# Longtail Frontend Setup
 
-This guide will help you through the process of setting up static frontend projects. This is a simple framework based on [NodeJS][0], [Yeoman][1], [Bower][2] and [Grunt][3] that automate a lot of tasks such as preprocessing your files and minify them. The framework includes:
+This guide will help you through the process of setting up static frontend projects. This is a simple framework based on [NodeJS](http://nodejs.org/), [Yeoman](http://yeoman.io/), [Bower](http://bower.io/) and [Grunt](http://gruntjs.com/) that automate a lot of tasks such as preprocessing your files and minify them. The framework includes:
 
 * A convenient folder structure.
-* A HTML template based on [HTML5 Boilerplate][4].
-* An optional set of [Jade][5] templates based on HTML5 Boilerplate to generate your pages.
-* Several [LESS][6] files that compile in a single autoprefixed minified CSS files.
-* Option to use [SCSS][11], but that bit is a work in progress.
-* A CSS grid framework based on [PureCSS][7].
-* [jQuery][8] and a few JavaScript helpers that compile in a single minified JavaScript file.
+* A HTML template based on [HTML5 Boilerplate](http://html5boilerplate.com/).
+* An optional set of [Jade](http://jade-lang.com/) templates based on HTML5 Boilerplate to generate your pages.
+* Several [LESS](http://lesscss.org/) files that compile in a single autoprefixed minified CSS files.
+* If you're a [SCSS](http://sass-lang.com/) person, you can use that too.
+* [jQuery](https://jquery.org/) and a few JavaScript helpers that compile in a single minified JavaScript file.
 * An image minifier.
 * A simple webserver that reloads automatically when you make changes.
-* A [Grunt][3] observer that automatically compile your changes on LESS and JavaScript files.
+* A [Grunt](http://gruntjs.com/) observer that automatically compile your changes on LESS/SCSS/Jade/JavaScript files.
 
-As the framework may evolve to include more options (such as including other JavaScript libraries like [AngularJS][9], or other pre-processors like [Stylus][10], ...), I strongly suggest that you subscribe to this Github project. This way you will get email notifications when a change is available and you will be able to update by reinstalling the [npm][13].
-
-For editing code, I suggest that you use [Sublime Text][14] with [Package Control][15] to extends its functionalies. This is the best and most extensible editor at the moment, simple as that.
+For editing code, I suggest that you use [Sublime Text](http://www.sublimetext.com/) with [Package Control](https://sublime.wbond.net/) to extends its functionalies. This is the best and most extensible editor at the moment, simple as that.
 
 ## Global Configuration
 
-The following needs to be done once.
+**The following needs to be done once.**
 
-[Install GIT][16]  
+[Install GIT](http://git-scm.com/downloads)  
 
 Important for Windows users, you must install msysgit correctly. Be sure to check the option shown below:  
 ![](http://demo.longtail.com.au/frontend/img/build/mysgit.png)
 
-[Install NodeJs][0]
+[Install NodeJs](http://nodejs.org/)
 
 Open a console (Windows: `Win+R` then type `cmd` then press Enter, Mac: `Command+Space` then type `terminal` then press Enter)
 
@@ -56,22 +53,19 @@ And press Enter
 
 ## Project Configuration
 
-The following needs to be done per project.
+**The following needs to be done per project.**
 
-
-Create a folder
-
+Create a new repository on Bitbucket that has the name of your project, or if it has already been created by the backend team, clone it on your hard drive. Into this project folder, create a `frontend/` folder. This folder will contain all the static resources of your frontend project.
 
 Move into this folder then `shift + right click` and select "Open command window here", on Mac open a Terminal and move to this folder (`cd \[your-path\]`) or go to `System Preferences \> Keyboard \> Keyboard Shortcuts \> Services` and enable `New Terminal at Folder` and the service will appear by `right click` or `Control + click` on the folder.
-
 
 In the console that opens, type:
 
 	yo longtail
 
-Press Enter and answer the few questions about the project name, description and version. If you want to use the [Jade templating engine][5], answer **yes** to the `Use Jade templating engine` question. I strongly recommend using Jade as it's a very powerful templating engine. Once you've adopted it, standard HTML coding looks like stone age.
+Press Enter and answer the few questions about the project name, description and version. If you want to use the [Jade templating engine](http://jade-lang.com/), answer **yes** to the `Use Jade templating engine` question. I strongly recommend using Jade as it's a very powerful templating engine. Once you've adopted it, standard HTML coding looks like stone age.
 
-You can choose to use [SCSS][11] instead of [LESS][6].
+You can choose to use [SCSS](http://sass-lang.com/) instead of [LESS](http://lesscss.org/).
 
 If you answer **yes** to the `ASPX form included in the markup` question, what the template does is adding a form tag after the body to encapsulate your page content. This may impact the style of your page.
 
@@ -79,18 +73,38 @@ When all this is done, all your templates files will be under the app folder, he
 
 `launchgrunt` first compiles all your files (js + less, etc.), launches a web server, watches any changes you make to re-compile on the fly, and finally refreshes the server.
 
-Open [http://localhost:8080/][17] to see this in action.
+Open [http://localhost:8080/](http://localhost:8080/) to see this in action.
+
+## Versioning on GIT (Bitbucket)
+
+Only the source files will be committed on GIT. This includes your `app/src/` folder, and all files that are needed to compile the source files such as the `Gruntfile`, … A `.gitignore` file is included in the project that does all the good things for you.
+
+To commit your frontend resources, into the console/terminal move to your project folder then you first need to add your new files:
+
+    git add *
+
+Then you need to commit your job:
+
+    git commit --all
+
+Adding a commit message at this stage is mandatory.
+When you’re happy with your commit, and when you’re done working, you need to push your commit(s) on GIT:
+
+    git push origin master
+
+Please note that the `master` in the above command refers to the branch on which you push your commit(s). Depending on the [GIT workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/) you’re using, you may want to push your commit(s) on another branch.
+
+To learn more about GIT, [here there are nice tutorials for your to read](https://www.atlassian.com/git/tutorials).
 
 ## Start Working
 
-Following are a few things to keep in mind when you work on your project:
+**Following are a few things to keep in mind when you work on your project:**
 
+Don't forget to launch `app/launchgrunt` (or to manually launch the `grunt` command into your console/terminal) before working on your project.
 
-Don't forget to launch app/launchgrunt before working on your project.
+Open [http://localhost:8080/](http://localhost:8080/).
 
-Open [http://localhost:8080/][17].
-
-There are two main folders in your `app/` folder: `app/build/` and `app/src/`. `app/build/` contains the compiled, concatenated and minified files you will deploy. You should never work into this folder. `app/src/` contains your working files. 
+There are two main folders in your `app/` folder: `app/build/` and `app/src/`. `app/build/` contains the compiled, concatenated and minified files you will deploy. You should never work into the `app/build` folder, if you do, you'll suffer immeasurable pain and die miserably. `app/src/` contains your working files, work here, and only here. 
 If you use Jade, save your Jade templates into the `app/src/jade folder`, and all your included Jade templates into the `app/src/jade/includes` folder. All generated HTML files will end up in the `app/build/` folder. If you don't use Jade, all the HTML files that you edit or create into the `app/src/` folder will be copied over the `app/build/` folder.
 
 Always write your JavaScript into `app/src/js/main.js`
@@ -100,8 +114,6 @@ Add any jQuery plugins or JavaScript helpers into `app/src/js/plugins.js`
 Don't forget to change your favicon and the IOS and Windows special icons/tiles on the `app/src/favicon/` folder.
 
 Always put your images into `app/src/img/`. If you delete an image, it will not be deleted on the `app/build/img/` folder, do it manually.
-
-If you want to commit your work on SVN or any version control system, don't commit the `node\_modules` folder. Create a rule to exclude them. This is automatically setup for GIT.
 
 ### Using LESS
 
@@ -122,7 +134,7 @@ For more convenience, a few common breakpoint variables have been added to `app/
 
 #### The grid system
 
-The grid system is based on [PureCSS][7] in term of philosophy: meaning it uses `display:flex` and fallbacks to `display:inline-block` for older browsers. No `float` here. There are no grid unit classes in the framework, just two useful mixins to build your grids.
+The grid system is based on [PureCSS](http://purecss.io/) in term of philosophy: meaning it uses `display:flex` and fallbacks to `display:inline-block` for older browsers. No `float` here. There are no grid unit classes in the framework, just two useful mixins to build your grids.
 
 ##### The grid units container
 
@@ -174,9 +186,9 @@ variables.scss - Set your variables here, font colours, media queries etc.
 Remember when adding a file, you must also add it to `main.scss`.
 
 Media Queries are set in _variables.scss and are called when needed. e.g:
+
 		.myelement {
-			color: red;
-			
+			color: red;			
 			@include media($medium) {
 				color: blue;
 			}
@@ -185,27 +197,3 @@ Media Queries are set in _variables.scss and are called when needed. e.g:
 Included is Bourbon and Bourbon Neat (Grid System). These come with some helpful mixins and a handy grid system.
 [Bourbon](http://bourbon.io/docs/)
 [Bourbon Neat](http://thoughtbot.github.io/neat-docs/latest/)
-
-Any bug? [Let me know][18].
-
-
-[0]: http://nodejs.org/
-[1]: http://yeoman.io/
-[2]: http://bower.io/
-[3]: http://gruntjs.com/
-[4]: http://html5boilerplate.com/
-[5]: http://jade-lang.com/
-[6]: http://lesscss.org/
-[7]: http://purecss.io/
-[8]: https://jquery.org/
-[9]: https://angularjs.org/
-[10]: http://learnboost.github.io/stylus/
-[11]: http://sass-lang.com/
-[12]: https://github.com/rkgttr/generator-longtail
-[13]: #npm
-[14]: http://www.sublimetext.com/2
-[15]: https://sublime.wbond.net/
-[16]: http://git-scm.com/downloads
-[17]: http://localhost:8080/
-[18]: mailto:eguittiere@longtail.com.au
-

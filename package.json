@@ -1,6 +1,6 @@
 {
   "name": "generator-longtail",
-  "version": "0.1.29",
+  "version": "0.1.30",
   "description": "Yeoman generator",
   "license": "MIT",
   "main": "app/index.js",
