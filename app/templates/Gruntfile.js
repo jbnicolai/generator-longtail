@@ -90,7 +90,8 @@ module.exports = function (grunt) {
                     banner: '<%%= banner %>',
                     mangle: true,
                     beautify: false,
-                    preserveComments: 'some'
+                    preserveComments: 'some',
+                    sourceMap: true
                 },
                 files: {
                     'app/build/js/global.min.js': ['bower_components/jquery/dist/jquery.min.js', 'app/src/js/plugins.js', 'app/src/js/main.js']
@@ -192,7 +193,7 @@ module.exports = function (grunt) {
             // watch for change in grunt file then reload if necessary
             configFiles: {
                 files: ['Gruntfile.js'],
-                tasks: [<% if (includeSCSS) { %>'sass', <% } else { %> 'less', <% } %>'cmq', 'autoprefixer', 'cssmin', 'uglify', 'newer:imagemin', <% if (includeJade) { %>'jade' <% } else { %> 'copy:html' <% } %>],
+                tasks: [<% if (includeSCSS) { %>'sass', <% } else { %> 'less', <% } %>'cmq', 'autoprefixer', 'cssmin', 'uglify', 'newer:imagemin', <% if (includeJade) { %>'jade' <% } else { %> 'copy:html' <% } %>, 'alldone'],
                 options: {
                     reload: true
                 }
@@ -200,7 +201,7 @@ module.exports = function (grunt) {
             // watch for changes in CSS
             styles: {
                 files: [<% if (includeSCSS) { %>"app/src/scss/**/*.scss", <% } else { %> "app/src/less/**/*.less" <% } %>],
-                tasks: [<% if (includeSCSS) { %>'sass', <% } else { %> 'less', <% } %> 'cmq', 'autoprefixer', 'cssmin'],
+                tasks: [<% if (includeSCSS) { %>'sass', <% } else { %> 'less', <% } %> 'cmq', 'autoprefixer', 'cssmin', 'alldone'],
                 options: {
                     livereload: true,
                     event: ['added', 'deleted', 'changed']
@@ -209,7 +210,7 @@ module.exports = function (grunt) {
             // watch for changes in script
             scripts: {
                 files: ['app/src/js/**/*.js'],
-                tasks: ['uglify:site'],
+                tasks: ['uglify:site', 'alldone'],
                 options: {
                     livereload: true,
                     event: ['added', 'deleted', 'changed']
@@ -218,7 +219,7 @@ module.exports = function (grunt) {
             // watch for change in favicon
             favicons: {
                 files: ['app/src/favicon/**/*.{png,icon}'],
-                tasks: ['copy:favicon'],
+                tasks: ['copy:favicon', 'alldone'],
                 options: {
                     livereload: true,
                     event: ['added', 'deleted', 'changed']
@@ -227,7 +228,7 @@ module.exports = function (grunt) {
             // watch for updates in images
             images: {
                 files: ['app/src/img/**/*.{png,jpg,gif,svg}'],
-                tasks: ['newer:imagemin', 'newer:svgmin'],
+                tasks: ['newer:imagemin', 'newer:svgmin', 'alldone'],
                 options: {
                     livereload: true,
                     event: ['added', 'deleted', 'changed']
@@ -236,7 +237,7 @@ module.exports = function (grunt) {
             // watch for updates in jades
             jades: {
                 files: ['app/src/jade/**/*.jade'],
-                tasks: ['jade'],
+                tasks: ['jade', 'alldone'],
                 options: {
                     livereload: true,
                     event: ['added', 'deleted', 'changed']
@@ -245,7 +246,7 @@ module.exports = function (grunt) {
             // watch for updates in html
             htmls: {
                 files: ['app/src/*.html'],
-                tasks: ['copy:html'],
+                tasks: ['copy:html', 'alldone'],
                 options: {
                     livereload: true,
                     event: ['added', 'deleted', 'changed']
@@ -254,7 +255,9 @@ module.exports = function (grunt) {
         }
     });
 
-
+    grunt.registerTask('alldone', function() {
+      grunt.log.warn('All done. Please don\'t forget to check your favicons, social media metatags, tracking and google analytics tags.');
+    });
     grunt.loadNpmTasks('grunt-contrib-uglify');<% if (includeSCSS) { %>
     grunt.loadNpmTasks('grunt-contrib-sass');<% } else { %>
     grunt.loadNpmTasks('grunt-contrib-less');<% } %>
@@ -270,6 +273,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
 
     // Default task(s).
-    grunt.registerTask('default', [<% if (includeSCSS) { %>'sass', <% } else { %> 'less', <% } %>'cmq', 'autoprefixer', 'copy:favicon', 'cssmin', 'uglify', 'imagemin', 'svgmin', <% if (includeJade) { %>'jade',  <% } else { %> 'copy:html', <% } %>'connect', 'watch']);
+    grunt.registerTask('default', [<% if (includeSCSS) { %>'sass', <% } else { %> 'less', <% } %>'cmq', 'autoprefixer', 'copy:favicon', 'cssmin', 'uglify', 'imagemin', 'svgmin', <% if (includeJade) { %>'jade',  <% } else { %> 'copy:html', <% } %>'alldone', 'connect', 'watch']);
 
 };

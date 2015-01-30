@@ -114,3 +114,5 @@ App_<%= camelname %>.prototype.doSomething = function () {
 $(document).ready(function () {
     App_<%= camelname %>.getInstance().init();
 });
+
+

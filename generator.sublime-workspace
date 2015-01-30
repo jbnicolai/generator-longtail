@@ -520,34 +520,10 @@
 	"buffers":
 	[
 		{
-			"file": "/E/Development/react/app/src/index.html",
+			"file": "/E/Development/generator-longtailbanners/app/templates/Gruntfile.js",
 			"settings":
 			{
-				"buffer_size": 1690,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/E/Development/react/Gruntfile.js",
-			"settings":
-			{
-				"buffer_size": 6385,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/E/Development/react/app/src/js/main.jsx",
-			"settings":
-			{
-				"buffer_size": 2973,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/E/Development/react/app/src/comments.json",
-			"settings":
-			{
-				"buffer_size": 127,
+				"buffer_size": 11505,
 				"line_ending": "Windows"
 			}
 		}
@@ -693,10 +669,9 @@
 	},
 	"expanded_folders":
 	[
-		"/E/Development/generator-longtail",
 		"/E/Development/generator-longtail/app",
-		"/E/Development/generator-longtail/app/templates/jade",
-		"/E/Development/generator-longtail/app/templates/scss",
+		"/E/Development/generator-longtail/app/templates",
+		"/E/Development/generator-longtailbanners",
 		"/E/Development/generator-longtailbanners/app",
 		"/E/Development/generator-longtailbanners/app/templates",
 		"/E/Development/react/app/src",
@@ -704,17 +679,25 @@
 	],
 	"file_history":
 	[
+		"/E/Development/generator-longtail/app/templates/Gruntfile.js",
+		"/E/Development/generator-longtail/app/templates/_package.json",
+		"/E/Development/generator-longtailbanners/app/templates/_package.json",
+		"/E/Development/generator-longtailbanners/package.json",
+		"/E/Development/generator-longtail/package.json",
+		"/E/Development/html5preso/package.json",
+		"/E/Development/html5preso/Gruntfile.js",
+		"/E/Development/html5preso/app/build/img/lt-logo.svg",
+		"/E/Development/react/app/src/comments.json",
+		"/E/Development/react/app/src/js/main.jsx",
+		"/E/Development/react/app/src/index.html",
+		"/E/Development/react/Gruntfile.js",
 		"/E/Development/react.html",
 		"/E/Development/code.js",
 		"/E/Development/liquorbarons/300x250-LiquorBarons-1/src/js/main.js",
 		"/E/Development/react/app/build/comments.json",
-		"/E/Development/generator-longtail/app/templates/Gruntfile.js",
-		"/E/Development/generator-longtail/app/templates/_package.json",
-		"/E/Development/generator-longtail/package.json",
 		"/E/Development/generator-longtail/README.md",
 		"/E/Development/generator-longtailbanners/README.md",
 		"/E/Development/generator-longtailbanners/app/templates/gitignore",
-		"/E/Development/generator-longtailbanners/package.json",
 		"/C/Users/eguittiere/AppData/Roaming/Sublime Text 3/Packages/User/MarkdownPreview.sublime-settings",
 		"/C/Users/eguittiere/AppData/Roaming/Sublime Text 3/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
 		"/C/Users/eguittiere/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
@@ -726,7 +709,6 @@
 		"/E/Development/generator-longtail/.git/config",
 		"/E/Development/generator-longtailbanners/app/index.js",
 		"/E/Development/generator-longtailbanners/app/templates/main.js",
-		"/E/Development/generator-longtailbanners/app/templates/_package.json",
 		"/E/Development/test/src/300x250_longtail_2015_test_externalAsset/js/main.js",
 		"/E/Development/test/Gruntfile.js",
 		"/E/Development/test/package.json",
@@ -757,7 +739,6 @@
 		"/E/Development/longtail-yeoman-generator-banners/generator-longtailbanners/app/templates/scss/main.scss",
 		"/E/Development/longtail-yeoman-generator-banners/generator-longtailbanners/app/templates/scss/tools/_variables.scss",
 		"/E/Development/longtail-yeoman-generator-banners/generator-longtailbanners/app/templates/scss/base/_normalize.scss",
-		"/E/Development/html5preso/Gruntfile.js",
 		"/E/Development/test/160x600_Client_Project_Banner1/src/less/main.less",
 		"/E/Development/longtail-yeoman-generator-banners/package.json",
 		"/E/Development/longtail-yeoman-generator-banners/app/templates/less/base/base.less",
@@ -825,13 +806,7 @@
 		"/E/Development/test/app/build/js/global.min.js",
 		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/Gruntfile.js",
 		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews11/src/js/main.js",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews11/build/feed_url.json",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews1/build/feed_url.json",
-		"/C/Users/eguittiere/AppData/Roaming/Sublime Text 3/Packages/devsync/DevSync.sublime-settings",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews9/src/js/main.js",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews8/src/js/main.js",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews7/src/js/main.js",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/728x90ChooseYourNews6/src/js/main.js"
+		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews11/build/feed_url.json"
 	],
 	"find":
 	{
@@ -1137,55 +1112,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/E/Development/react/app/src/index.html",
+					"file": "/E/Development/generator-longtailbanners/app/templates/Gruntfile.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1690,
+						"buffer_size": 11505,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1619,
-								1619
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/brogrammer (SL).tmTheme",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/E/Development/react/Gruntfile.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6385,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								962,
-								962
+								84,
+								84
 							]
 						],
 						"settings":
@@ -1200,66 +1144,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/E/Development/react/app/src/js/main.jsx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2973,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								659,
-								659
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/brogrammer (SL).tmTheme",
-							"syntax": "Packages/ReactJS/syntax/jsx/tmLanguage/JavaScript (JSX).tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/E/Development/react/app/src/comments.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 127,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								127,
-								127
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/brogrammer (SL).tmTheme",
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
 					"type": "text"
 				}
 			]
