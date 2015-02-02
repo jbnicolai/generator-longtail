@@ -11,15 +11,11 @@
 		},
 		{
 			"follow_symlinks": true,
-			"path": "E:\\Development\\test\\src"
+			"path": "E:\\Development\\test\\app\\src"
 		},
 		{
 			"follow_symlinks": true,
-			"path": ".git"
-		},
-		{
-			"follow_symlinks": true,
-			"path": "E:\\Development\\react\\app\\src"
+			"path": "E:\\Development\\test\\app\\build"
 		}
 	]
 }

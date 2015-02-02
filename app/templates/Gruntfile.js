@@ -151,11 +151,9 @@ module.exports = function (grunt) {
                 }, {
                     removeEditorsNSData: true
                 }, {
-                    cleanupIDs: true
-                }, {
                     convertColors: true
                 }, {
-                    convertStyleToAttrs: true
+                    convertStyleToAttrs: false
                 }, {
                     convertShapeToPath: true
                 }, {
@@ -167,7 +165,7 @@ module.exports = function (grunt) {
                 }, {
                     convertPathData: true
                 }, {
-                    removeUselessStrokeAndFill: false
+                    removeUselessStrokeAndFill: true
                 }]
             },
             dist: {

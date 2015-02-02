@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"medi",
+				"mediaTrack"
+			],
+			[
+				"track",
+				"trackingURL"
+			],
+			[
+				"tra",
+				"trackingURL"
+			],
+			[
 				"banners",
 				"bannersname"
 			],
@@ -502,29 +514,57 @@
 			[
 				"backgrou",
 				"background-size"
-			],
-			[
-				"windo",
-				"windows"
-			],
-			[
-				"app",
-				"append	.append"
-			],
-			[
-				"mouse",
-				"mouseenter	mouseenter"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "/E/Development/generator-longtailbanners/app/templates/Gruntfile.js",
+			"file": "app/templates/index-dotnet.jade",
 			"settings":
 			{
-				"buffer_size": 11505,
+				"buffer_size": 2432,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/templates/Gruntfile.js",
+			"settings":
+			{
+				"buffer_size": 9977,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 864,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/templates/index-nodotnet.html",
+			"settings":
+			{
+				"buffer_size": 3264,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/templates/index-nodotnet.jade",
+			"settings":
+			{
+				"buffer_size": 2419,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/index.js",
+			"settings":
+			{
+				"buffer_size": 7506,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -669,16 +709,26 @@
 	},
 	"expanded_folders":
 	[
+		"/E/Development/generator-longtail",
 		"/E/Development/generator-longtail/app",
 		"/E/Development/generator-longtail/app/templates",
-		"/E/Development/generator-longtailbanners",
+		"/E/Development/generator-longtail/app/templates/js",
 		"/E/Development/generator-longtailbanners/app",
 		"/E/Development/generator-longtailbanners/app/templates",
-		"/E/Development/react/app/src",
 		"/E/Development/react/app/src/js"
 	],
 	"file_history":
 	[
+		"/E/Development/test/app/src/js/main.js",
+		"/E/Development/generator-longtail/app/templates/js/plugins.js",
+		"/E/Development/generator-longtail/app/templates/main.js",
+		"/E/Development/test/Gruntfile.js",
+		"/E/Development/generator-longtailbanners/app/templates/Gruntfile.js",
+		"/E/Development/ecu-lifelessons.ecu.edu.au/MicrositeWebUI/mediatags/engineering.html",
+		"/E/Development/liquorbarons/300x250-LiquorBarons-1/src/js/main.js",
+		"/E/Development/generator-longtail/app/templates/index-dotnet.html",
+		"/E/Development/generator-longtail/app/templates/index-nodotnet.html",
+		"/E/Development/react/app/src/index.html",
 		"/E/Development/generator-longtail/app/templates/Gruntfile.js",
 		"/E/Development/generator-longtail/app/templates/_package.json",
 		"/E/Development/generator-longtailbanners/app/templates/_package.json",
@@ -689,11 +739,9 @@
 		"/E/Development/html5preso/app/build/img/lt-logo.svg",
 		"/E/Development/react/app/src/comments.json",
 		"/E/Development/react/app/src/js/main.jsx",
-		"/E/Development/react/app/src/index.html",
 		"/E/Development/react/Gruntfile.js",
 		"/E/Development/react.html",
 		"/E/Development/code.js",
-		"/E/Development/liquorbarons/300x250-LiquorBarons-1/src/js/main.js",
 		"/E/Development/react/app/build/comments.json",
 		"/E/Development/generator-longtail/README.md",
 		"/E/Development/generator-longtailbanners/README.md",
@@ -701,7 +749,6 @@
 		"/C/Users/eguittiere/AppData/Roaming/Sublime Text 3/Packages/User/MarkdownPreview.sublime-settings",
 		"/C/Users/eguittiere/AppData/Roaming/Sublime Text 3/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
 		"/C/Users/eguittiere/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/E/Development/generator-longtailbanners/app/templates/Gruntfile.js",
 		"/E/Development/generator-longtail/app/index.js",
 		"/E/Development/generator-longtail/app/templates/README.md",
 		"/E/Development/test/README.md",
@@ -710,7 +757,6 @@
 		"/E/Development/generator-longtailbanners/app/index.js",
 		"/E/Development/generator-longtailbanners/app/templates/main.js",
 		"/E/Development/test/src/300x250_longtail_2015_test_externalAsset/js/main.js",
-		"/E/Development/test/Gruntfile.js",
 		"/E/Development/test/package.json",
 		"/E/Development/test/src/300x250_longtail_2015_test_4/jade/index.jade",
 		"/E/Development/test/src/300x250_longtail_2015_test_3/jade/index.jade",
@@ -722,7 +768,6 @@
 		"/E/Development/generator-longtailbanners/app/templates/main.scss",
 		"/E/Development/generator-longtailbanners/app/templates/index.html",
 		"/E/Development/generator-longtailbanners/.gitignore",
-		"/E/Development/generator-longtail/app/templates/main.js",
 		"/E/Development/generator-longtailbanners/app/templates/main.less",
 		"/E/Development/generator-longtailbanners/app/templates/index.jade",
 		"/E/Development/test/src/728x90_Client_Project_Banner1/index.html",
@@ -801,12 +846,7 @@
 		"/E/Development/test/app/src/scss/layout/_header.scss",
 		"/E/Development/test/app/src/scss/main.scss",
 		"/E/Development/generator-longtail/app/templates/scss/Gruntfile.js",
-		"/E/Development/generator-longtail/.gitignore",
-		"/E/Development/test/app/src/js/main.js",
-		"/E/Development/test/app/build/js/global.min.js",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/Gruntfile.js",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews11/src/js/main.js",
-		"/E/Development/PerthNow/CONEL0002 PerthNow.com.au/160x600ChooseYourNews11/build/feed_url.json"
+		"/E/Development/generator-longtail/.gitignore"
 	],
 	"find":
 	{
@@ -849,6 +889,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			">",
+			" href",
+			" sizes=",
+			"<link ",
+			"<",
+			" />",
+			">",
+			"<meta ",
 			"connect",
 			"[17]",
 			"[16]",
@@ -968,15 +1016,7 @@
 			"6",
 			"3",
 			"scriptsfiles",
-			"/src/css/*.css",
-			"cmqsrc",
-			"300x250",
-			"160x600",
-			"imgmin",
-			"160x600",
-			"lessfiles",
-			"160x600",
-			", {\n                    src: \"160x600ChooseYourNews3/src/less/main.less\",\n                    dest: \"160x600ChooseYourNews3/src/css/styles.css\"\n                }"
+			"/src/css/*.css"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1112,24 +1152,55 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/E/Development/generator-longtailbanners/app/templates/Gruntfile.js",
+					"file": "app/templates/index-dotnet.jade",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11505,
+						"buffer_size": 2432,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								84,
-								84
+								1054,
+								1054
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/brogrammer (SL).tmTheme",
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/templates/Gruntfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9977,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8238,
+								8238
 							]
 						],
 						"settings":
@@ -1140,7 +1211,131 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
+						"translation.y": 1944.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 864,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								320,
+								320
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/brogrammer (SL).tmTheme",
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/templates/index-nodotnet.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3264,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								392,
+								392
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/brogrammer (SL).tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/templates/index-nodotnet.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2419,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1207,
+								1196
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/brogrammer (SL).tmTheme",
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7506,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2812,
+								2812
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/brogrammer (SL).tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 918.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
